@@ -3,11 +3,7 @@ var SRC_DIR = path.join(__dirname, '/client/src');
 var DIST_DIR = path.join(__dirname, '/client/dist');
 
 module.exports = {
-  entry: `${SRC_DIR}/Components/Main.jsx`,
-  output: {
-    filename: 'bundle.js',
-    path: DIST_DIR
-  },
+  entry: `${SRC_DIR}/Main.jsx`,
   module: {
     rules: [
       {
@@ -20,7 +16,25 @@ module.exports = {
             presets: ['@babel/preset-react', '@babel/preset-env']
           }
         }
+      },
+      {
+        test: /\.css$/,
+        use: [
+          {
+            loader: 'style-loader'
+          },
+          {
+            loader: 'css-loader',
+            options: {
+              modules: true
+            }
+          }
+        ]
       }
     ]
-  }
+  },
+  output: {
+    filename: 'bundle.js',
+    path: DIST_DIR
+  },
 };

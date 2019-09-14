@@ -3,8 +3,8 @@ const bodyParser = require('body-parser');
 
 const app = express();
 
-app.use('/:gameId/:game_name', express.static(__dirname + '/../client/dist'));
-app.use(express.static('public'));
+// app.use('/:gameId/:game_name', express.static(__dirname + '/../client/dist'));
+app.use(express.static(__dirname + '/../public'));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 

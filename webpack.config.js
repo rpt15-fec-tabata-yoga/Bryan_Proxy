@@ -3,7 +3,7 @@
 // var DIST_DIR = path.join(__dirname, '/client/dist');
 
 // module.exports = {
-//   entry: `${SRC_DIR}/Main.jsx`,
+//   entry: `${SRC_DIR}/index.jsx`,
 //   module: {
 //     rules: [
 //       {

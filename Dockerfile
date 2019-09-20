@@ -10,6 +10,6 @@ COPY . .
 # Build for production
 # RUN npm run build --production
 # What port will the container talk to the outside world with once created?
-EXPOSE 3002
+EXPOSE 3006
 # How do you start your app?
 CMD ["npm", "run", "dockerStart"]

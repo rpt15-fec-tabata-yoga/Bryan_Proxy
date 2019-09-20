@@ -4,6 +4,6 @@ services:
   proxy:
     build: .
     ports:
-    - "80:3002"
+    - "80:3006"
 
   
